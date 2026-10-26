@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class DogWalkCompany {
     private int[] schedule;
 
-    public int numAvaiableDogs(int hour) {
+    public int numAvailableDogs(int hour) {
         return schedule[hour];
     }
     public void updateDogs(int hour, int numberDogsWalked) {

@@ -9,6 +9,14 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             companies[i] = new DogWalkCompany(s.nextLine());
         }
-
-    }
+        f = new File("walkers.txt");
+        s = new Scanner(f);
+        int company =s.nextInt();
+        int maxDogs = s.nextInt();
+        DogWalker walker = new DogWalker(maxDogs, companies[company]);
+        int startHour = s.nextInt();
+        int endHour = s.nextInt();
+        int pay = walker.dogWalkShift(startHour, endHour);
+        System.out.println(pay);
+}
 }
